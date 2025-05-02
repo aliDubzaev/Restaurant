@@ -1,6 +1,9 @@
 @use './colors.scss' as c;
 @use './fonts.scss';
 
+$mobile: 768px;
+$tablet: 1024px;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -132,4 +135,75 @@ body {
 }
 .active {
 	background-color: c.$secondary;
+}
+
+@media (max-width: $tablet) {
+  #content {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .container {
+    padding: 1rem !important;
+    
+    .home {
+      padding: 5rem 1rem !important;
+      
+      h1 {
+        font-size: 2.5rem !important;
+      }
+    }
+
+    table {
+      margin: 1rem 0 !important;
+      width: 100%;
+      
+      th, td {
+        padding: 0.8rem !important;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  nav {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 1rem !important;
+    
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .container {
+    .home {
+      padding: 3rem 1rem !important;
+      
+      h1 {
+        font-size: 2rem !important;
+      }
+      
+      button {
+        width: 100% !important;
+      }
+    }
+
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto !important;
+    padding: 1rem !important;
+    
+    .footer-item {
+      margin: 0.3rem 0;
+    }
+  }
 }

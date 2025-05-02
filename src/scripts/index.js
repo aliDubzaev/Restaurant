@@ -15,8 +15,6 @@ function init() {
 function createNavigation() {
   const nav = document.createElement('nav');
   const content = document.getElementById('content');
-  
-  // Массив для удобного создания кнопок
   const buttons = [
     { text: 'Главная', id: 'home', active: true },
     { text: 'Меню', id: 'menu' },
@@ -33,17 +31,17 @@ function createNavigation() {
 }
 
 function createNavButton(text, id, isActive = false) {
-  const button = document.createElement('button'); // Лучше использовать <button> для доступности
+  const button = document.createElement('button'); 
   button.textContent = text;
   button.id = id;
   button.className = 'nav-item' + (isActive ? ' active' : '');
-  button.setAttribute('aria-current', isActive ? 'page' : 'false'); // Для доступности
+  button.setAttribute('aria-current', isActive ? 'page' : 'false'); 
   return button;
 }
 
 function createContentContainer() {
-  const container = document.createElement('main'); // Лучше использовать <main> для семантики
-  container.id = 'main-content'; // Добавляем ID для лучшей доступности
+  const container = document.createElement('main'); 
+  container.id = 'main-content'; 
   container.className = 'container';
   document.getElementById('content').appendChild(container);
 }
@@ -61,7 +59,7 @@ function createFooter() {
     link.href = site.url;
     link.textContent = site.name;
     link.target = '_blank';
-    link.rel = 'noopener noreferrer'; // Для безопасности
+    link.rel = 'noopener noreferrer'; 
     link.className = 'footer-item';
     footer.appendChild(link);
   });
@@ -70,18 +68,16 @@ function createFooter() {
 }
 
 function switchTab(event) {
-  const button = event.target.closest('.nav-item'); // Используем closest для делегирования событий
+  const button = event.target.closest('.nav-item'); 
   
   if (!button) return;
   
-  // Обновляем активное состояние
   document.querySelectorAll('.nav-item').forEach(btn => {
     const isActive = btn === button;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-current', isActive ? 'page' : 'false');
   });
 
-  // Загружаем соответствующий контент
   const container = document.querySelector('.container');
   container.innerHTML = '';
   
@@ -100,5 +96,4 @@ function switchTab(event) {
   }
 }
 
-// Запускаем приложение после загрузки DOM
 document.addEventListener('DOMContentLoaded', init);
