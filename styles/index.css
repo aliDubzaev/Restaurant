@@ -1,0 +1,141 @@
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/styles/index.scss ***!
+  \********************************************************************************************************************************************/
+@font-face {
+  font-family: "Nanum Myeongjo", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/Restaurant/assets/fcaf993f3bcda5e8bc1c.webp);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  width: 900px;
+  min-height: 100dvh;
+  position: relative;
+  background: rgba(0, 0, 0, 0.85);
+}
+#content nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  color: #eee;
+}
+#content nav .nav-item {
+  position: relative;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-bottom 0.3s;
+}
+#content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+  color: #eee;
+  animation: intro 0.5s ease both;
+}
+#content .container .home {
+  display: flex;
+  flex-direction: column;
+  padding: 13rem;
+}
+#content .container .home h1 {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-size: 4.2rem;
+  margin-bottom: 0.5rem;
+}
+#content .container .home p {
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+#content .container .home span {
+  font-weight: 900;
+  font-style: italic;
+}
+#content .container .home button {
+  padding: 0.8rem;
+  width: 50%;
+  text-transform: uppercase;
+  color: #eee;
+  background-color: #ec1d1d;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+#content .container .home button:active {
+  scale: 0.98;
+}
+#content .container table {
+  margin: 2rem 8rem;
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  text-align: left;
+}
+#content .container table caption {
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+#content .container table th,
+#content .container table td {
+  padding: 1.5rem;
+  border-bottom: 1px dashed #eee;
+  text-align: left;
+}
+#content .container .contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100dvh - 140px);
+}
+#content .container .contact-box h2 {
+  margin-bottom: 1rem;
+}
+#content .container .contact-box p {
+  margin-bottom: 0.2rem;
+}
+#content .container .contact-box .title {
+  font-style: italic;
+}
+#content footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#content footer .footer-item {
+  text-decoration: none;
+  color: #8e8e8e;
+  cursor: pointer;
+  transition: scale 0.3s;
+}
+#content footer .footer-item:hover {
+  scale: 1.05;
+}
+
+.active {
+  background-color: #ec1d1d;
+}
